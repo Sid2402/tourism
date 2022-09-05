@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Best Places
+    </title>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" href="navigation.css">
+    <style>
+        body{
+                background-image: url("https://c4.wallpaperflare.com/wallpaper/883/833/297/india-beach-tropical-paradise-wallpaper-preview.jpg");
+                background-size:cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                
+            }
+        h1{
+                text-align: center;
+                color:black;
+                font-family: 'Times New Roman';
+                font-size: 50px;
+                text-shadow:2px 2px white ;
+            }
+    </style>
+</head>
+<body>
+    <br>
+    <h1>
+        POPULAR DESTINATIONS
+    </h1>
+    <div class="navbar">
+        <a href="file:///C:/Users/Administrator/Desktop/126/project.html"> Home</a> 
+        <a href="file:///C:/Users/Administrator/Desktop/126/project3.html"> Search</a> 
+        <a href="#"> Contact</a> 
+        <a class="active" href="file:///C:/Users/Administrator/Desktop/126/project4.html">Best places</a>
+        <a herf="#about" class="split">Help</a>
+      </div>
+      
+      <div class="container">
+        <div class="mySlides">
+          <div class="numbertext">1 / 6</div>
+          <img src="https://www.incredibleindia.org/content/dam/incredibleindia/images/places/delhi/delhi-india-gate-0.jpg/jcr:content/renditions/cq5dam.web.1024.576.jpeg" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 6</div>
+          <img src="https://www.holidify.com/images/cmsuploads/compressed/shutterstock_694433434_20191213110339_20191213110412.png" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 6</div>
+          <img src="https://www.incredibleindia.org/content/dam/incredibleindia/images/places/chennai/chennai-marina-beach-60.jpg/jcr:content/renditions/cq5dam.web.1024.576.jpeg" style="width:100%">
+        </div>
+          
+        <div class="mySlides">
+          <div class="numbertext">4 / 6</div>
+          <img src="https://www.incredibleindia.org/content/dam/incredibleindia/images/places/kochi/kochi-athirapally-waterfalls-0.jpg/jcr:content/renditions/cq5dam.web.1024.576.jpeg" style="width:100%">
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">5 / 6</div>
+          <img src="https://www.incredibleindia.org/content/dam/incredible-india-v2/images/places/agra/taj-mahal-1.jpg/jcr:content/renditions/cq5dam.web.1024.576.jpeg" style="width:100%">
+        </div>
+          
+        <div class="mySlides">
+          <div class="numbertext">6 / 6</div>
+          <img src="https://www.incredibleindia.org/content/dam/incredible-india-v2/images/places/leh/leh-ladakh-leh-ladakh-zanskar-valley.jpg/jcr:content/renditions/cq5dam.web.1024.576.jpeg" style="width:100%">
+        </div>
+          
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+      
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+      
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdnpUyA3ZUhAiwFtnhRGbH6eXtmaWpQX8B2Q&usqp=CAU" style="width:100%" onclick="currentSlide(1)" alt="DELHI">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="https://www.fabhotels.com/blog/wp-content/uploads/2018/09/Gateway-of-India-1.jpg" style="width:100%" onclick="currentSlide(2)" alt="MUMBAI">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="https://www.fabhotels.com/blog/wp-content/uploads/2018/09/places-vist-in-Chennai-600.jpg" style="width:100%" onclick="currentSlide(3)" alt="CHENNAI-MARINA BEACH">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/06/74/7d/59.jpg" style="width:100%" onclick="currentSlide(4)" alt="KOCHI-Athirapally Waterfalls">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqA3SMPg3N_Z1vtoCtz2ymruCrTYDCKCRDwWZScdVvPVuEWcEuxZs-h5ZDYKT2-9nJhTA&usqp=CAU" style="width:100%" onclick="currentSlide(5)" alt="AGRA-TAJ MAHAL">
+          </div>    
+          <div class="column">
+            <img class="demo cursor" src="https://www.inmarathi.site/wp-content/uploads/2022/08/2999_20190305160539.jpg" style="width:100%" onclick="currentSlide(6)" alt="LEH-LADAKH">
+          </div>
+        </div>
+      </div>
+      
+      <script>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+      </script>
+
+
+
+
+</body>
+</html>
